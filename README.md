@@ -1,4 +1,4 @@
-<p align="center"><a href="https://1cak.com/" target="_blank"><img src="https://1.bp.blogspot.com/-EZnVjlOBJho/YI-jRS1tNiI/AAAAAAAAAOw/DTgsHIZdeck-U_g7Rxnhm2kR55OIs0OIQCLcBGAsYHQ/w640-h360/Untitled-2.png" width="600"></a></p>
+<p align="center"><a href="https://1cak.com/" target="_blank"><img src="https://1.bp.blogspot.com/-EZnVjlOBJho/YI-jRS1tNiI/AAAAAAAAAOw/DTgsHIZdeck-U_g7Rxnhm2kR55OIs0OIQCLcBGAsYHQ/w640-h360/Untitled-2.png" width="500"></a></p>
 
 <p align="center">
 <h1 align="center">COMMIT TIAP HARI JAN LUPA!!!</h1>
@@ -14,17 +14,17 @@
 - setelah itu langsung ketik lagi php artisan serve.
 
 <p align="center">
-<p align="center"><a href="https://1cak.com/" target="_blank"><img src="https://www.vhv.rs/dpng/d/478-4788165_certified-bruh-moment-meme-hd-png-download.png" width="400"></a></p>
+<p align="center"><a href="https://1cak.com/" target="_blank"><img src="https://i.redd.it/qngf2brdvgv21.png" width="400"></a></p>
 <h1 align="center">KELOMPOK 1</h1>
 </p>
 
 ## Anggota 
--[Dana satria](https://github.com/Danasatria)
--[Falih aufar](https://github.com/Falih2003)
--[Ziya adatul mahbubah](https://github.com/ziiiiyaaaaaa)
--[Saifudin ilham](https://github.com/MrIdn24)
--[Adinda may melati](https://github.com/dindamay)
--[Pandya Widyadhana](https://github.com/kosong_gak_ngasih_github)
+-[Dana satria](https://github.com/Danasatria).
+-[Falih aufar](https://github.com/Falih2003).
+-[Ziya adatul mahbubah](https://github.com/ziiiiyaaaaaa).
+-[Saifudin ilham](https://github.com/MrIdn24).
+-[Adinda may melati](https://github.com/dindamay).
+-[Pandya Widyadhana](https://github.com/kosong_gak_ngasih_github).
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
