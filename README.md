@@ -11,9 +11,16 @@
 ## Cara install
 
 - Clone dulu projectnya di github desktop.
+- Jangan lupa bikin database namanya ukk_pm
 - setelah diclone buka di VSC.
 - abis itu langsung ketik php artisan migrate:fresh --seed diterminal/gitbahs.
 - setelah itu langsung ketik lagi php artisan serve.
+
+<p align="center"><a href="https://1cak.com/" target="_blank"><img src="https://i.redd.it/qngf2brdvgv21.png" width="400"></a></p>
+
+<p align="center">
+    <h1>COMMIT TIAP HARI JAN LUPA!!!</h1>
+</p>
 
 
 ## About Laravel
