@@ -1,9 +1,8 @@
-<p align="center"><a href="https://1cak.com/" target="_blank"><img src="https://1.bp.blogspot.com/-EZnVjlOBJho/YI-jRS1tNiI/AAAAAAAAAOw/DTgsHIZdeck-U_g7Rxnhm2kR55OIs0OIQCLcBGAsYHQ/w640-h360/Untitled-2.png" width="400"></a></p>
+<p align="center"><a href="https://1cak.com/" target="_blank"><img src="https://1.bp.blogspot.com/-EZnVjlOBJho/YI-jRS1tNiI/AAAAAAAAAOw/DTgsHIZdeck-U_g7Rxnhm2kR55OIs0OIQCLcBGAsYHQ/w640-h360/Untitled-2.png" width="600"></a></p>
 
 <p align="center">
-    <h1>COMMIT TIAP HARI JAN LUPA!!!</h1>
+<h1 align="center">COMMIT TIAP HARI JAN LUPA!!!</h1>
 </p>
-
 
 ## Cara install
 
