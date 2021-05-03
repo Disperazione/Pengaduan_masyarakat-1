@@ -3,9 +3,10 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
-class Petugas extends Model
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class Petugas extends Authenticatable
 {
     use HasFactory;
 
@@ -14,7 +15,7 @@ class Petugas extends Model
     protected $fillable = [
         'nama_petugas',
         'username',
-        'passworld',
+        'password',
         'telp',
         'level',
     ];

@@ -31,26 +31,17 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="{{ route('adu.register') }}" method="POST">
+                        <form action="{{ route('admin.login') }}" method="POST">
                             @csrf
                             <div class=" form-group">
-                                <input type="number" name="nik" placeholder="NIK" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="nama" placeholder="Nama Lengkap" class="form-control">
-                            </div>
-                            <div class="form-group">
                                 <input type="text" name="username" placeholder="Username" class="form-control">
                             </div>
                             <div class="form-group">
-                                <input type="password" name="password" placeholder="Password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="number" name="telp" placeholder="No. Telp" class="form-control">
+                                <input type="password" name="password" placeholder="Passworld" class="form-control">
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">
-                                    REGISTER
+                                    Login
                                 </button>
                             </div>
 
