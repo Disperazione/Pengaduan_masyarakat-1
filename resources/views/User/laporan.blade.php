@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{{ asset('css/laporan.css') }}">
 @endsection
 
-@section('title', 'PEKAT - Pengaduan Masyarakat')
+@section('title', 'ADU - Pengaduan Masyarakat')
 
 @section('content')
 {{-- Section Header --}}
@@ -14,8 +14,7 @@
         <div class="container">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ route('adu.index') }}">
-                    <h4 class="semi-bold mb-0 text-white">PEKAT</h4>
-                    <p class="italic mt-0 text-white">Pengaduan Masyarakat</p>
+                    
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,6 +22,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     @if(Auth::guard('masyarakat')->check())
+                    <ul class="navbar-nav" style="margin-left: 800px">
+                        <li class="nav-item">
+                            <a class="nav-link ml-3 text-white" href="{{ route('adu.index') }}">Home</a>
+                        </li>
+                    </ul>
                     <ul class="navbar-nav text-center ml-auto">
                         <li class="nav-item">
                             <a class="nav-link ml-3 text-white" href="{{ route('adu.laporan') }}">Laporan</a>
@@ -53,7 +57,7 @@
 <div class="container">
     <div class="row justify-content-between">
         <div class="col-lg-8 col-md-12 col-sm-12 col-12 col">
-            <div class="content content-top shadow">
+            <div class="content content-top shadow rounded">
                 @if ($errors->any())
                 @foreach ($errors->all() as $error)
                 <div class="alert alert-danger">{{ $error }}</div>
@@ -77,7 +81,7 @@
             </div>
         </div>
         <div class="col-lg-4 col-md-12 col-sm-12 col-12 col">
-            <div class="content content-bottom shadow">
+            <div class="content content-bottom shadow rounded">
                 <div>
                     <img src="{{ asset('images/user_default.svg') }}" alt="user profile" class="photo">
                     <div class="self-align">
@@ -161,10 +165,7 @@
 </div>
 {{-- Footer --}}
 <div class="mt-5">
-    <hr>
-    <div class="text-center">
-        <p class="italic text-secondary">© 2021 Ihsanfrr • All rights reserved</p>
-    </div>
+
 </div>
 @endsection
 

@@ -78,7 +78,7 @@ class UserController extends Controller
             'telp' => $data['telp'],
         ]);
 
-        return redirect()->route('pekat.index');
+        return redirect()->route('adu.index');
     }
 
     public function logout()
@@ -119,7 +119,7 @@ class UserController extends Controller
         ]);
 
         if ($pengaduan) {
-            return redirect()->route('pekat.laporan', 'me')->with(['pengaduan' => 'Berhasil terkirim!', 'type' => 'success']);
+            return redirect()->route('adu.laporan', 'me')->with(['pengaduan' => 'Berhasil terkirim!', 'type' => 'success']);
         } else {
             return redirect()->back()->with(['pengaduan' => 'Gagal terkirim!', 'type' => 'danger']);
         }
