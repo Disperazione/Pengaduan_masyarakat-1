@@ -19,12 +19,12 @@
 </p>
 
 ## Anggota 
--[Dana satria](https://github.com/Danasatria).
--[Falih aufar](https://github.com/Falih2003).
--[Ziya adatul mahbubah](https://github.com/ziiiiyaaaaaa).
--[Saifudin ilham](https://github.com/MrIdn24).
--[Adinda may melati](https://github.com/dindamay).
--[Pandya Widyadhana](https://github.com/kosong_gak_ngasih_github).
+- **[Dana satria](https://github.com/Danasatria)**
+- **[Falih aufar](https://github.com/Falih2003)**
+- **[Ziya adatul mahbubah](https://github.com/ziiiiyaaaaaa)**
+- **[Saifudin ilham](https://github.com/MrIdn24)**
+- **[Adinda may melati](https://github.com/dindamay)**
+- **[Pandya Widyadhana](https://github.com/kosong_gak_ngasih_github)**
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
