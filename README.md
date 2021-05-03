@@ -9,10 +9,11 @@
 
 
 ## Cara install
-1.[Clone dulu projectnya di github desktop]
-2.[setelah diclone buka di VSC]
-3.[abis itu langsung ketik php artisan migrate:fresh --seed diterminal/gitbahs]
-4.[setelah itu langsung ketik lagi php artisan serve] 
+
+- Clone dulu projectnya di github desktop.
+- setelah diclone buka di VSC.
+- abis itu langsung ketik php artisan migrate:fresh --seed diterminal/gitbahs.
+- setelah itu langsung ketik lagi php artisan serve.
 
 
 ## About Laravel
