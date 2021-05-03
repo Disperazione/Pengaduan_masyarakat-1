@@ -9,8 +9,22 @@
 - Clone dulu projectnya di github desktop.
 - Jangan lupa bikin database namanya ukk_pm
 - setelah diclone buka di VSC.
+- sebelum migrate:fresh ganti nama file .env.example jadi .env
 - abis itu langsung ketik php artisan migrate:fresh --seed diterminal/gitbahs.
 - setelah itu langsung ketik lagi php artisan serve.
+
+<p align="center">
+<p align="center"><a href="https://1cak.com/" target="_blank"><img src="https://www.vhv.rs/dpng/d/478-4788165_certified-bruh-moment-meme-hd-png-download.png" width="400"></a></p>
+<h1 align="center">KELOMPOK 1</h1>
+</p>
+
+## Anggota 
+-[Dana satria](https://github.com/Danasatria)
+-[Falih aufar](https://github.com/Falih2003)
+-[Ziya adatul mahbubah](https://github.com/ziiiiyaaaaaa)
+-[Saifudin ilham](https://github.com/MrIdn24)
+-[Adinda may melati](https://github.com/dindamay)
+-[Pandya Widyadhana](https://github.com/kosong_gak_ngasih_github)
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
