@@ -1,3 +1,18 @@
+<p align="center"><a href="https://1cak.com/" target="_blank"><img src="https://1.bp.blogspot.com/-EZnVjlOBJho/YI-jRS1tNiI/AAAAAAAAAOw/DTgsHIZdeck-U_g7Rxnhm2kR55OIs0OIQCLcBGAsYHQ/w640-h360/Untitled-2.png" width="600"></a></p>
+
+<p align="center">
+<h1 align="center">COMMIT TIAP HARI JAN LUPA!!!</h1>
+</p>
+
+## Cara install
+
+- Clone dulu projectnya di github desktop.
+- Jangan lupa bikin database namanya ukk_pm
+- setelah diclone buka di VSC.
+- abis itu langsung ketik php artisan migrate:fresh --seed diterminal/gitbahs.
+- setelah itu langsung ketik lagi php artisan serve.
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
@@ -6,14 +21,6 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
-
-
-## Cara install
-
-- Clone dulu projectnya di github desktop.
-- setelah diclone buka di VSC.
-- abis itu langsung ketik php artisan migrate:fresh --seed diterminal/gitbahs.
-- setelah itu langsung ketik lagi php artisan serve.
 
 
 ## About Laravel
