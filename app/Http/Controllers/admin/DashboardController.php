@@ -10,15 +10,22 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $petugas = Petugas::all()->count();
 
         $masyarakat = Masyarakat::all()->count();
+
+        $pengaduan1 = Pengaduan::all()->count();
+
+        $pending = Pengaduan::where('status', '0')->get()->count();
 
         $proses = Pengaduan::where('status', 'proses')->get()->count();
 
         $selesai = Pengaduan::where('status', 'selesai')->get()->count();
 
-        return view('Admin.Dashboard.index', ['petugas' => $petugas, 'masyarakat' => $masyarakat, 'proses' => $proses,  'selesai' => $selesai]);
+        $pengaduan = Pengaduan::orderBy('tgl_pengaduan','desc')->get();
+
+        return view('Admin.Dashboard.index', ['petugas' => $petugas, 'masyarakat' => $masyarakat, 'pengaduan' => $pengaduan, 'pengaduan1' => $pengaduan1, 'pending' => $pending, 'proses' => $proses,  'selesai' => $selesai]);
     }
 }

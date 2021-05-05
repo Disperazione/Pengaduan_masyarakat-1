@@ -1,4 +1,4 @@
-<div class="main-sidebar">
+<div class="main-sidebar position-fixed">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
             <a href="{{ route('dashboard.index') }}">ADU</a>

@@ -15,7 +15,7 @@
 
                     <div class="card-header-action">
                         @if ($pengaduan->status == '0')
-                            <a href='#' class='badge badge-danger '>panding</a>
+                            <a href='#' class='badge badge-danger '>pending</a>
                         @elseif ($pengaduan->status == 'proses')
                             <a href='#' class='badge badge-warning'>proses</a>
                         @else

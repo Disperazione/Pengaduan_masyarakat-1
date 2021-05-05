@@ -21,15 +21,13 @@
         </thead>
         <tbody>
             @foreach ($pengaduan as $p => $v)
-                
-            @endforeach
             <tr>
                 <td>{{ $p += 1 }}</td>
                 <td>{{ $v->tgl_pengaduan->format('d-M-Y') }}</td>
                 <td>{{ $v->isi_laporan }}</td>
                 <td>
                     @if ($v->status == '0')
-                        <a href='#' class='badge badge-danger '>panding</a>
+                        <a href='#' class='badge badge-danger '>pending</a>
                     @elseif ($v->status == 'proses')
                         <a href='#' class='badge badge-warning'>proses</a>
                     @else
@@ -38,6 +36,7 @@
                 </td> 
                 <td><a href="{{ route('pengaduan.show', $v->id_pengaduan) }} " class="btn btn-success">Lihat</a></td>
             </tr>
+            @endforeach
         </tbody>
     </table>
 @endsection

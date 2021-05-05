@@ -24,10 +24,18 @@
                                 <li class="nav-item">
                                     <a class="nav-link ml-3 text-white" href="{{ route('adu.laporan') }}">Laporan</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link ml-3 text-white" href="{{ route('adu.logout') }}"
-                                        style="text-decoration: underline">{{ Auth::guard('masyarakat')->user()->nama }}</a>
-                                </li>
+                                <li class="dropdown"><a href="#" data-toggle="dropdown"
+                                    class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                                    <img alt="image" src={{ asset("../assets/img/avatar/avatar-1.png") }} class="rounded-circle mr-1">
+                                    <div class="d-sm-none d-lg-inline-block">Hi, {{ Auth::guard('masyarakat')->user()->nama }}</div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-title">Logged in 5 min ago</div>
+                                    <a href="{{ route('adu.logout') }}" class="dropdown-item has-icon text-danger">
+                                        <i class="fas fa-sign-out-alt"></i>Logout
+                                    </a>
+                                </div>
+                            </li>
                             </ul>
                         @else
                             <ul class="navbar-nav text-center ml-auto">
