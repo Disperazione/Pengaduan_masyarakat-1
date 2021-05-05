@@ -31,10 +31,10 @@
                         </p>
                     </div>
                     <div class="chocolat-parent">
-                        <a href="../assets/img/example-image.jpg" class="chocolat-image" title="Just an example">
+                        <a href="{{ Storage::url($pengaduan->foto) }}" class="chocolat-image" title="Foto bukti">
                             <div data-crop-image="285">
                                 <img alt="image" src="{{ Storage::url($pengaduan->foto) }}" alt="Foto bukti"
-                                    class="img-fluid">
+                                    class="embed-responsive">
                             </div>
                         </a>
                     </div>

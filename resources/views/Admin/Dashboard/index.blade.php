@@ -1,6 +1,44 @@
 @extends('layouts.admin')
 @section('titel', 'ADU - admin')
 @section('judul', 'Dahsboard')
+@section('css')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css"
+        integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
+        crossorigin="anonymous" />
+@endsection
+
+@section('js')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+        integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+        crossorigin="anonymous"></script>
+    <script>
+        var chartCanvas = document.getElementById("myChart");
+        Chart.defaults.global.defaultFontSize = 14;
+
+        var chartData = {
+            labels: [
+                "Pending",
+                "Proses",
+                "Selesai",
+            ],
+            datasets: [{
+                data: [500, 0, 0],
+                backgroundColor: [
+                    "#fc544b",
+                    "#6777ef",
+                    "#63ED7A"
+                ]
+            }]
+        };
+
+        var pieChart = new Chart(chartCanvas, {
+            type: 'pie',
+            data: chartData
+        });
+
+    </script>
+@endsection
+
 @section('konten')
     <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-12">
@@ -37,6 +75,14 @@
                     </div>
                 </div>
             </div>
+            <div class="mb-5">
+                @csrf
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="myChart" height="240px"></canvas>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="col-lg-4 col-md-4 col-sm-12">
@@ -70,6 +116,31 @@
                     </div>
                 </div>
             </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h4>Foto pengaduan terbaru</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="row gutters-sm">
+                            @foreach ($gambar as $p => $v)
+                                <div class="col-12 col-sm-4">
+                                    <label class="imagecheck mb-4">
+                                        <input name="imagecheck" value="1" class="imagecheck-input" />
+                                        <figure class="imagecheck-figure">
+                                            @if ($v->foto != null)
+                                                <img src="{{ Storage::url($v->foto) }}"
+                                                    alt="{{ 'Foto ' . $v->isi_laporan }}" class="imagecheck-image">
+                                            @endif
+                                        </figure>
+                                    </label>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-12">
             <div class="card card-hero">
@@ -78,29 +149,29 @@
                         <i class="far fa-question-circle"></i>
                     </div>
                     <h4>{{ $pengaduan1 }}</h4>
-                    <div class="card-description">Laporan masyarakat</div>
+                    <div class="card-description">Laporan masyarakat terbaru</div>
                 </div>
                 <div class="card-body p-0">
                     @foreach ($pengaduan as $p => $v)
-                    <div class="tickets-list">
-                        <a href="#" class="ticket-item">
-                            <div class="ticket-title">
-                                <h4>{{ $v->isi_laporan }}</h4>
-                            </div>
-                            <div class="ticket-info">
-                                <div>NIK :{{ $v->nik }}</div>
-                                <div class="bullet"></div>
-                                <div class="text-primary">{{ $v->tgl_pengaduan->format('d-M-Y') }}</div>
-                            </div>
-                        </a>
-                        @endforeach
-                        <a href="{{ route('pengaduan.index') }}" class="ticket-item ticket-more">
-                            View All <i class="fas fa-chevron-right"></i>
-                        </a>
-                    </div>
+                        <div class="tickets-list">
+                            <a href="#" class="ticket-item">
+                                <div class="ticket-title">
+                                    <h4>{{ $v->isi_laporan }}</h4>
+                                </div>
+                                <div class="ticket-info">
+                                    <div>NIK :{{ $v->nik }}</div>
+                                    <div class="bullet"></div>
+                                    <div class="text-primary">{{ $v->tgl_pengaduan->format('d-M-Y') }}</div>
+                                </div>
+                            </a>
+                    @endforeach
+                    <a href="{{ route('pengaduan.index') }}" class="ticket-item ticket-more">
+                        View All <i class="fas fa-chevron-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     {{-- <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 col-12">

@@ -24,8 +24,11 @@ class DashboardController extends Controller
 
         $selesai = Pengaduan::where('status', 'selesai')->get()->count();
 
-        $pengaduan = Pengaduan::orderBy('tgl_pengaduan','desc')->get();
+        $pengaduan = Pengaduan::orderBy('tgl_pengaduan','desc')->limit(4)->get();
 
-        return view('Admin.Dashboard.index', ['petugas' => $petugas, 'masyarakat' => $masyarakat, 'pengaduan' => $pengaduan, 'pengaduan1' => $pengaduan1, 'pending' => $pending, 'proses' => $proses,  'selesai' => $selesai]);
+        $gambar = Pengaduan::orderBy('tgl_pengaduan','desc')->limit(3)->get();
+
+        return view('Admin.Dashboard.index', ['petugas' => $petugas, 'masyarakat' => $masyarakat, 'pengaduan' => $pengaduan, 
+        'pengaduan1' => $pengaduan1, 'pending' => $pending, 'proses' => $proses,  'selesai' => $selesai, 'gambar' => $gambar]);
     }
 }
