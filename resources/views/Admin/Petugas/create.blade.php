@@ -9,6 +9,7 @@
 @section('konten')
     <div class="card">
         <form action="{{ route('petugas.store') }}" method="POST">
+            @csrf
             <div class="card-header">
                 <h4>Form Tambah</h4>
             </div>

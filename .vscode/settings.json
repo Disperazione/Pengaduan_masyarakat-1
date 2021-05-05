@@ -1,0 +1,7 @@
+{
+    "discord.removeTimestamp": true,
+    "discord.workspaceExcludePatterns": [
+        "CAPEK"
+    ],
+    "discord.detailsEditing": "Editing {empty}"
+}
