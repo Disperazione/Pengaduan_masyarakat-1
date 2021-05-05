@@ -9,6 +9,7 @@
 - Clone dulu projectnya di github desktop.
 - Jangan lupa bikin database namanya ukk_pm
 - setelah diclone buka di VSC.
+- Ketika composer install
 - Ketikan php artisan key:generate
 - sebelum migrate:fresh ganti nama file .env.example jadi .env
 - abis itu langsung ketik php artisan migrate:fresh --seed diterminal/gitbahs.
