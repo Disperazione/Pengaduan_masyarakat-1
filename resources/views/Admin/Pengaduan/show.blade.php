@@ -52,7 +52,7 @@
                 <div class="card-body">
                     <form action="{{ route('tanggapan.createOrUpdate') }}" method="POST">
                         @csrf
-                        <input type="hidden" id="id_pengaduan" value="{{ $pengaduan->id_pengaduan }}">
+                        <input type="hidden" name="id_pengaduan" id="id_pengaduan" value="{{ $pengaduan->id_pengaduan }}">
                         <div class="form-group">
                             <label for="status">Status</label>
                             <div class="input-group">

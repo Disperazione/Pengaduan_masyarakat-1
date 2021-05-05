@@ -27,7 +27,7 @@ class TanggapanController extends Controller
                 'id_petugas' => Auth::guard('admin')->user()->id_petugas,
             ]);
 
-            return redirect()->route('pengaduan.show', ['pengaduan' => $pengaduan, 'tanggapan' => $tanggapan]);
+            return redirect()->route('pengaduan.show', ['pengaduan' => $pengaduan, 'tanggapan' => $tanggapan])->with(['status' => 'Berhasil Terkirim']);;
 
         } else {
             $pengaduan->update(['status' => $request->status]);
