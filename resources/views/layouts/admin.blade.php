@@ -13,10 +13,10 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <!-- CSS Libraries -->
-    @stack('css')
+    @yield('css')
     <!-- Template CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="{{ asset('../assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('../assets/css/components.css') }}">
 </head>
 
 <body>
@@ -60,7 +60,7 @@
     <script src="../assets/js/stisla.js"></script>
 
     <!-- JS Libraies -->
-    @stack('js')
+    @yield('js')
     <!-- Template JS File -->
     <script src="../assets/js/scripts.js"></script>
     <script src="../assets/js/custom.js"></script>
