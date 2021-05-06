@@ -31,4 +31,15 @@ class DashboardController extends Controller
         return view('Admin.Dashboard.index', ['petugas' => $petugas, 'masyarakat' => $masyarakat, 'pengaduan' => $pengaduan, 
         'pengaduan1' => $pengaduan1, 'pending' => $pending, 'proses' => $proses,  'selesai' => $selesai, 'gambar' => $gambar]);
     }
+
+    public function ajax(Request $request)
+    {
+        if ($request->ajax()) {
+            $data = [];
+            $data[] = Pengaduan::where('status', '0')->count();
+            $data[] = Pengaduan::where('status', 'proses')->count();
+            $data[] = Pengaduan::where('status', 'selesai')->count();
+            return response()->json(compact('data'));
+        }
+    }
 }

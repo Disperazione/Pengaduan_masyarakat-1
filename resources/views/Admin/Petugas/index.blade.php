@@ -30,7 +30,7 @@
                 <td>{{ $v->telp }}</td>
                 <td>{{ $v->level }}</td>
                 <td>
-                    <a href="{{ route('pengaduan.edit',$v->id_petugas) }}" class="btn btn-primary btn-sm">Edit</a>
+                    <a href="{{ route('petugas.edit',$v->id_petugas) }}" class="btn btn-success btn-sm">Lihat</a>
                 </td>
             </tr>
             @endforeach

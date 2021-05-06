@@ -1,43 +1,64 @@
 @extends('layouts.admin')
 @section('titel', 'ADU - admin')
 @section('judul', 'Dahsboard')
-@section('css')
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css"
-        integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
-        crossorigin="anonymous" />
-@endsection
+    @push('css')
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css"
+            integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
+            crossorigin="anonymous"/>
+    @endpush
 
-@section('js')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
-        integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
-        crossorigin="anonymous"></script>
-    <script>
-        var chartCanvas = document.getElementById("myChart");
-        Chart.defaults.global.defaultFontSize = 14;
+    @push('js')
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+            integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                var status = [];
+                $.ajax({
+                    url: "{{ route('dashboard.ajax') }}",
+                    type: "POST",
+                    data: {
+                        _token: '{{ csrf_token() }}'
+                    },
+                    success: function(data) {
+                        array = data.data;
+                        console.log(array);
+                        for (let i = 0; i < array.length; i++) {
+                            status.push(array[i]);
+                        }
+                    },
+                    error: function(data) {
+                        console.log('Error:', data);
+                    }
+                });
+                var chartCanvas = document.getElementById("myChart");
+                Chart.defaults.global.defaultFontSize = 14;
 
-        var chartData = {
-            labels: [
-                "Pending",
-                "Proses",
-                "Selesai",
-            ],
-            datasets: [{
-                data: [500, 0, 0],
-                backgroundColor: [
-                    "#fc544b",
-                    "#6777ef",
-                    "#63ED7A"
-                ]
-            }]
-        };
+                var chartData = {
+                    labels: [
+                        "Pending",
+                        "Proses",
+                        "Selesai"
+                    ],
+                    datasets: [{
+                        data: status,
+                        backgroundColor: [
+                            "#fc544b",
+                            "#6777ef",
+                            "#63ED7A"
+                        ]
+                    }]
+                };
 
-        var pieChart = new Chart(chartCanvas, {
-            type: 'pie',
-            data: chartData
-        });
+                var pieChart = new Chart(chartCanvas, {
+                    type: 'pie',
+                    data: chartData
+                });
+            });
 
-    </script>
-@endsection
+        </script>
+    @endpush
 
 @section('konten')
     <div class="row">

@@ -50,13 +50,14 @@ Route::prefix('admin')->group(function () {
         // Masyarakat
         Route::resource('masyarakat', MasyarakatController::class);
 
-        // Laporan
+        // Lapora
         Route::get('laporan', [LaporanController::class, 'index'])->name('laporan.index');
     });
 
     Route::middleware(['isPetugas'])->group(function () {
         // Dashboard
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+        Route::post('/dashboard', [DashboardController::class, 'ajax'])->name('dashboard.ajax');
 
         // Pengaduan
         Route::resource('pengaduan', PengaduanController::class);

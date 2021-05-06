@@ -7,6 +7,20 @@
 @endsection
 
 @section('konten')
+    <div>
+        @if (Session::has('username'))
+            <div class="alert alert-danger" role="alert">>
+                {{ Session::get('username') }}
+            </div>
+        @endif
+        @if ($errors->any())
+            @foreach ($errors->all() as $error)
+                <div class="alert alert-danger" role="alert">
+                    {{ $error }}
+                </div>
+            @endforeach
+        @endif
+    </div>
     <div class="card">
         <form action="{{ route('petugas.store') }}" method="POST">
             @csrf

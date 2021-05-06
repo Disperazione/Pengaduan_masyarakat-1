@@ -15,9 +15,9 @@
 
                     <div class="card-header-action">
                         @if ($pengaduan->status == '0')
-                            <a href='#' class='badge badge-danger '>pending</a>
+                            <a href='#' class='badge badge-danger '>Pending</a>
                         @elseif ($pengaduan->status == 'proses')
-                            <a href='#' class='badge badge-warning'>proses</a>
+                            <a href='#' class='badge badge-warning'>Proses</a>
                         @else
                             <a href='#' class='badge badge-success'>selesai</a>
                         @endif
@@ -43,11 +43,9 @@
         </div>
 
         <div class="col-12 col-sm-6 col-lg-6">
-            <div class="card">
+            <div class="card" id="sample-login">
                 <div class="card-header">
-                    <div class="text-center">
-                        Tanggapan petugas
-                    </div>
+                    <h4>Beri Tanggapan</h4>
                 </div>
                 <div class="card-body">
                     <form action="{{ route('tanggapan.createOrUpdate') }}" method="POST">
@@ -58,7 +56,7 @@
                             <div class="input-group">
                                 <select name="status" id="status" class="custom-select">
                                     @if ($pengaduan->status == '0')
-                                        <option selected value="0">Panding</option>
+                                        <option selected value="0">Pending</option>
                                         <option value="proses">Proses</option>
                                         <option value="selesai">Selesai</option>
                                     @elseif ($pengaduan->status == 'proses')
@@ -87,66 +85,6 @@
                     @endif
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            {{-- <div class="card" id="sample-login">
-                <div class="card-header">
-                    <h4>Beri Tanggapan</h4>
-                </div>
-                <form method="POST" action="{{ route('tanggapan.createOrUpdate') }}">
-                    @csrf
-                    <input type="hidden" id="id_pengaduan" value="{{ $pengaduan->id_pengaduan }}">
-                    <div class="card-body pb-0">
-                        <div class="form-group">
-                            <label for="status">Status</label>
-                            <select name="status" id="status" class="form-control form-control-sm">
-                                @if ($pengaduan->status == '0')
-                                    <option selected value="0">Panding</option>
-                                    <option value="proses">Proses</option>
-                                    <option value="selesai">Selesai</option>
-                                @elseif ($pengaduan->status == 'proses')
-                                    <option value="0">Panding</option>
-                                    <option selected value="proses">Proses</option>
-                                    <option value="selesai">Selesai</option>
-                                @else
-                                    <option value="0">Panding</option>
-                                    <option value="proses">Proses</option>
-                                    <option selected value="selesai">Selesai</option>
-                                @endif
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="tanggapan">Tanggapan</label>
-                            <textarea class="form-control" rows="10"
-                                placeholder="Tidak ada tanggapan" name="tanggapan" id="tanggapan">{{ $tanggapan->$tanggapan ?? '' }}</textarea>
-                        </div>
-                    </div>
-                    <div class="card-footer pt-">
-                        <button type="submit" class="btn btn-primary">Kirim</button>
-                    </div>
-                </form>
-                @if (Session::has('status'))
-                    <div class="alert alert-success mt-2">
-                        {{ Session::get('status') }}
-                    </div>
-                @endif
-            </div> --}}
         </div>
     </div>
 
