@@ -2,9 +2,9 @@
 @section('titel', 'ADU - admin - petugas')
 @section('judul', 'Tambah Petugas')
 
-@section('css')
+@push('css')
 
-@endsection
+@endpush
 
 @section('konten')
     <div>

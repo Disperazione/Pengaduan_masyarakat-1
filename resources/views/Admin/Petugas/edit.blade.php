@@ -2,9 +2,9 @@
 @section('titel', 'ADU - admin - petugas')
 @section('judul', 'Edit Data Petugas')
 
-@section('css')
+@push('css')
 
-@endsection
+@endpush
 
 @section('konten')
     <div class="card">

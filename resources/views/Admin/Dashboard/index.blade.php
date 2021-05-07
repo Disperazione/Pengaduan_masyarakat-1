@@ -4,7 +4,7 @@
     @push('css')
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css"
             integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
-            crossorigin="anonymous"/>
+            crossorigin="anonymous" />
     @endpush
 
     @push('js')
@@ -14,7 +14,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script>
             $(document).ready(function() {
-                var status = [];
+                const chartCanvas = document.getElementById("myChart");
+                Chart.defaults.global.defaultFontSize = 14;
                 $.ajax({
                     url: "{{ route('dashboard.ajax') }}",
                     type: "POST",
@@ -22,38 +23,28 @@
                         _token: '{{ csrf_token() }}'
                     },
                     success: function(data) {
-                        array = data.data;
-                        console.log(array);
-                        for (let i = 0; i < array.length; i++) {
-                            status.push(array[i]);
-                        }
+                        const pieChart = new Chart(chartCanvas, {
+                            type: 'pie',
+                            data: {
+                                labels: [
+                                    "Pending",
+                                    "Proses",
+                                    "Selesai"
+                                ],
+                                datasets: [{
+                                    data: data.data,
+                                    backgroundColor: [
+                                        "#fc544b",
+                                        "#6777ef",
+                                        "#63ED7A"
+                                    ]
+                                }]
+                            }
+                        });
                     },
                     error: function(data) {
                         console.log('Error:', data);
                     }
-                });
-                var chartCanvas = document.getElementById("myChart");
-                Chart.defaults.global.defaultFontSize = 14;
-
-                var chartData = {
-                    labels: [
-                        "Pending",
-                        "Proses",
-                        "Selesai"
-                    ],
-                    datasets: [{
-                        data: status,
-                        backgroundColor: [
-                            "#fc544b",
-                            "#6777ef",
-                            "#63ED7A"
-                        ]
-                    }]
-                };
-
-                var pieChart = new Chart(chartCanvas, {
-                    type: 'pie',
-                    data: chartData
                 });
             });
 

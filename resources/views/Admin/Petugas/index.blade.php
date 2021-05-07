@@ -2,11 +2,11 @@
 @section('titel', 'ADU - admin - Petugas')
 @section('judul', 'Data Petugas')
 
-@section('css')
+@push('css')
     <!-- CSS Libraries -->
     <link rel="stylesheet" href="../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="../node_modules/datatables.net-select-bs4/css/select.bootstrap4.min.css">
-@endsection
+@endpush
 
 @section('konten')
     <a href="{{ route('petugas.create') }}" class="btn btn-primary mb-3">Tambah data <i class="fas fa-plus-circle"></i></a>
@@ -40,7 +40,7 @@
 
 
 
-@section('js')
+@push('js')
     <!-- JS Libraies -->
     <script src="../node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="../node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -52,4 +52,4 @@
 
     <!-- Page Specific JS File -->
     <script src="../assets/js/page/modules-datatables.js"></script>
-@endsection
+@endpush
