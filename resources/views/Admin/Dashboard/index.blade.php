@@ -144,6 +144,9 @@
                                             @if ($v->foto != null)
                                                 <img src="{{ Storage::url($v->foto) }}"
                                                     alt="{{ 'Foto ' . $v->isi_laporan }}" class="imagecheck-image">
+                                            @else
+                                                <img src="{{ Storage::url($v->foto) }}" alt="{{ 'Tidak melampikan' }}"
+                                                    class="imagecheck-image">
                                             @endif
                                         </figure>
                                     </label>
@@ -177,9 +180,11 @@
                                 </div>
                             </a>
                     @endforeach
-                    <a href="{{ route('pengaduan.index') }}" class="ticket-item ticket-more">
-                        View All <i class="fas fa-chevron-right"></i>
-                    </a>
+                    @if ($pengaduan ?? '')
+                        <a href="{{ route('pengaduan.index') }}" class="ticket-item ticket-more">
+                            View All <i class="fas fa-chevron-right"></i>
+                        </a>
+                    @endif
                 </div>
             </div>
         </div>
