@@ -22,10 +22,11 @@
 
 ## Akun
 
-<h3>Login sebagai admin dan petugas</h3> **[Klik disini].(http://127.0.0.1:8000/admin)**
-- **ID: admin
-- **ID: petugas
-- **PW: password
+- **[Login sebagai admin Klik disini](http://127.0.0.1:8000/admin)**
+- username: admin
+- PW: password <br>
+- username: petugas
+- PW: password
 
 ## Anggota 
 - **[Dana satria](https://github.com/Danasatria)**
